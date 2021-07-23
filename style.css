@@ -35,6 +35,11 @@ ul {
 }
 
 /*====  BASE ============================ */
+html {
+  /*direcionamento suave quando clicado os itens do menu*/
+  scroll-behavior: smooth;
+}
+
 body {
   font: 400 1rem 'DM Sans', sans-serif;
   color: var(--text-color);
@@ -68,12 +73,21 @@ body {
   height: 1px;
   background: linear-gradient(
     270deg,
-    hsla(var(--hue), 36%, 57%, 1) 0%,
-    hsla(var(--hue), 65%, 88%, 0.34) 100%
+    hsla(var(--hue), 36%, 57%, 1),
+    hsla(var(--hue), 65%, 88%, 0.34)
   );
 }
 
+.divider-2 {
+  height: 1px;
+  background: linear-gradient(
+    270deg,
+    hsla(var(--hue), 65%, 88%, 0.34),
+    hsla(var(--hue), 36%, 57%, 1)
+  );
+}
 
+/*====  LAYOUT ============================ */
 .container {
   margin-left: 1.5rem;
   margin-right: 1.5rem;
@@ -88,6 +102,18 @@ body {
   padding: 5rem 0;
 }
 
+.section .title{
+  margin-bottom: 1rem;
+}
+
+.section header{
+  margin-bottom: 4rem;
+}
+
+.section header strong{
+  color: var(--base-color);
+}
+
 #header {
   border-bottom: 1px solid #e4e4e4;
   margin-bottom: 2rem;
@@ -99,6 +125,20 @@ body {
   z-index: 100;
   background-color: var(--body-color);
   width: 100%;
+}
+
+#header.scroll {
+  background: var(--base-color);
+}
+
+#header.scroll .logo span{
+  color: white;
+  transition: 1s;
+}
+
+#header.scroll .icon-menu {
+  color: white;
+  transition: .1s;
 }
 
 main {
@@ -115,6 +155,10 @@ main {
   color: var(--base-color);
 }
 
+.logo-alt span {
+  color: var(--body-color);
+}
+
 /*====  NAVIGATION ============================ */
 nav {
   height: var(--header-height);
@@ -123,7 +167,6 @@ nav {
   justify-content: space-between;
   width: 100%;  
 }
-
 
 nav ul li {
   text-align: center;  
@@ -153,9 +196,18 @@ nav ul li a:hover::after {
   width: 100%;
 }
 
+/* MENU FECHADO*/
 nav .menu {
   opacity: 0;
   visibility: hidden;
+
+  /*transição*/
+  top: -20rem;
+  transition: .2s;
+}
+
+nav .menu ul {
+  display: none;
 }
 
 /*MENU ABERTO*/
@@ -167,12 +219,13 @@ nav.show .menu {
   width: 100vw;
   position: fixed;
   top: 0;
-  left: 0;  
+  left: 0; 
+  display: grid;
+  place-content: center; 
 }
 
-nav.show .menu {
+nav.show .menu ul{
   display: grid;
-  place-content: center;
 }
 
 nav ul.grid {
@@ -189,18 +242,19 @@ nav ul.grid {
 nav .icon-close {
   visibility: hidden;
   opacity: 0;
-
   position: absolute;
   right: 1.5rem;
+
   /*transição*/
+  transition: .2s;
+  top: -1.5rem;
 }
 
 nav.show div.icon-close{
   visibility: visible;
   opacity: 1;
+  top: 1.5rem;
 }
-
-
 
 /*====  HOME ============================ */
 #home {
@@ -249,3 +303,213 @@ nav.show div.icon-close{
 #home .text p {
   margin-bottom: 2rem;
 }
+
+/*====  ABOUT ============================ */
+#about {
+  background: white;
+}
+
+#about .container {
+  margin: 0;
+}
+
+#about .image {
+  position: relative;
+}
+
+#about .image::before {
+  content: '';
+  height: 100%;
+  width: 100%;
+  background: var(--base-color-second);
+  position: absolute;
+  top: -8.3%;
+  left: -33%;
+  z-index: 0;
+}
+
+#about .image img {
+  position: relative; 
+}
+
+#about .image img,
+#about .image::before {
+  border-radius: 0.25rem;
+}
+
+#about .text {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;  
+}
+
+/*====  SERVICES ============================ */
+.cards.grid {
+  gap: 1.5rem;  
+}
+
+.card {
+  padding: 3.625rem 2rem;
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.08);
+  border-bottom: 0.25rem solid var(--base-color);
+  border-radius: 0.25rem 0.25rem 0 0;
+  text-align: center;
+}
+
+.card i {
+  display: block;
+  margin-bottom: 1rem;
+  font-size: 5rem;
+  color: var(--base-color);
+}
+
+.card .title {
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+/*====  TESTIMONIALS ============================ */
+#testimonials {
+  background: white;
+}
+
+#testimonials .container {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+#testimonials header {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+  margin-bottom: 0;
+}
+
+#testimonials blockquote {
+  padding: 2rem;
+  box-shadow: 0px 0px 12px rgba(32, 19, 19, 0.15);
+  border-radius: 0.25rem;
+}
+
+#testimonials blockquote p {
+  position: relative;
+  text-indent: 1.875rem;
+  margin-bottom: 1.5rem;
+  color: var(--title-color);
+}
+
+#testimonials blockquote p span {
+  font: 700 3rem serif;
+  position: absolute;
+  top: -.5rem;
+  left: -1.875rem;
+  color: var(--base-color);
+}
+
+#testimonials cite {
+  display: flex;
+  align-items: center;  
+}
+
+#testimonials cite img {
+  width: 2rem;
+  height: 2rem;
+  object-fit: cover;/* preenche a imagem */ 
+  clip-path: circle(); /* cria uma máscara circular - deixa a foto redonda */
+  margin-right: 0.5rem;
+}
+
+/* swiper */
+.swiper-slide {
+  height: auto;
+  padding: 4rem 1rem;
+}
+
+.swiper-pagination-bullet {
+  width: 0.75rem;
+  height: 0.75rem;
+}
+
+.swiper-pagination-bullet-active {
+  background: var(--base-color);
+}
+
+/*====  CONTACT ============================ */
+#contact .grid{
+  gap: 4rem;
+}
+
+#contact .text p {
+  margin-bottom: 4rem;
+}
+
+#contact .button i,
+#contact ul li i {
+  font-size: 1.5rem;
+  margin-right: 0.625rem;
+}
+
+#contact ul li i {
+  color: var(--base-color);
+}
+
+#contact ul.grid {
+  gap: 2rem;
+}
+
+#contact ul li {
+  display: flex;
+  align-items: center;
+}
+
+/*====  FOOTER ============================ */
+footer {
+  background:var(--base-color);
+}
+
+footer .logo {
+  display: inline-block;
+  margin-bottom: 1.5rem ;
+}
+
+footer .brand p{
+  color: var(--text-color-light);
+  margin-bottom: 0.75rem;
+}
+
+footer i {
+  font-size: 1.5rem;
+  color: var(--text-color-light);
+}
+
+footer .social a{
+  margin-right: 2rem;
+  transition: .3s;
+  display: inline-block;
+}
+
+footer .social a:hover {
+  transform: translateY(-5px);
+}
+
+.back-to-top {
+  background: var(--base-color);
+  color: var(--text-color-light);  
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  padding: 0.5rem;
+  clip-path: circle();
+  font-size: 1.5rem;
+  line-height: 0;
+  visibility: hidden;
+  opacity: 0;
+  transition: .3s;
+  transform: translateY(100%);
+}
+
+.back-to-top.show {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
