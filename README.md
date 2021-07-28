@@ -1,3 +1,7 @@
+## 💻 Projeto
+
+OriginSix é uma página institucional no formato One Page, responsiva, para usar em diversos tipos de micro, pequena e média empresas. Contém as seguintes seções: Header, Navigation, Home, Sobre, Serviços, Depoimentos, Contato e Footer
+<br/>
 <p align="center">
   Telas responsíveis para mobile
 </p>
@@ -27,9 +31,7 @@ Utilitários
 - [randomuser.me](https://randomuser.me/photos)
 - [IconMoon](https://icomoon.io/app/#/select)
 
-## 💻 Projeto
 
-OriginSix é uma página institucional no formato One Page, responsiva, para usar em diversos tipos de micro, pequena e média empresas. Contém as seguintes seções: Header, Navigation, Home, Sobre, Serviços, Depoimentos, Contato e Footer
 
 ## 🔖 Layout
 
