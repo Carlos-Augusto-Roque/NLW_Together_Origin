@@ -17,10 +17,10 @@ Projeto no formato One Page e responsivo contendo as seguintes seções: Header,
   Telas para Desktop
 </p>
 <p align="center">
-  <img alt="OriginSix" src="./printScreen/desktop-home.png" width="50%">
-  <img alt="OriginSix" src="./printScreen/desktop-abbout.png" width="50%">
-  <img alt="OriginSix" src="./printScreen/desktop-testimonials.png" width="50%">
-  <img alt="OriginSix" src="./printScreen/desktop-contact.png" width="50%">
+  <img alt="OriginSix" src="./printScreen/desktop-home.png" width="100%">
+  <img alt="OriginSix" src="./printScreen/desktop-abbout.png" width="100%">
+  <img alt="OriginSix" src="./printScreen/desktop-testimonials.png" width="100%">
+  <img alt="OriginSix" src="./printScreen/desktop-contact.png" width="100%">
 </p>
 
 ## 🚀 Tecnologias
