@@ -16,6 +16,7 @@ Rocketseat - NLW Together - Origin ( Aplicação HTML + CSS + JavaScript)
 
 <p align="center">
   <img alt="OriginSix" src="./printScreen/mobile-home.png" width="25%">
+  <img alt="OriginSix" src="./printScreen/mobile-abbout.png" width="25%">
 </p>
 
 ## 🚀 Tecnologias
