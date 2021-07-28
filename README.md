@@ -3,13 +3,24 @@
 OriginSix é uma página institucional no formato One Page, responsiva, para usar em diversos tipos de micro, pequena e média empresas. Contém as seguintes seções: Header, Navigation, Home, Sobre, Serviços, Depoimentos, Contato e Footer
 <br/>
 <p align="center">
-  Telas responsíveis para mobile
+  Telas para mobile
 </p>
 <p align="center">
   <img alt="OriginSix" src="./printScreen/mobile-home.png" width="25%">
   <img alt="OriginSix" src="./printScreen/mobile-abbout.png" width="25%">
   <img alt="OriginSix" src="./printScreen/mobile-testimonials.png" width="25%">
   <img alt="OriginSix" src="./printScreen/mobile-contact.png" width="25%">
+  <img alt="OriginSix" src="./printScreen/mobile-footer.png" width="25%">
+</p>
+
+<p align="center">
+  Telas para Desktop
+</p>
+<p align="center">
+  <img alt="OriginSix" src="./printScreen/desktop-home.png" width="25%">
+  <img alt="OriginSix" src="./printScreen/desktop-abbout.png" width="25%">
+  <img alt="OriginSix" src="./printScreen/desktop-testimonials.png" width="25%">
+  <img alt="OriginSix" src="./printScreen/desktop-contact.png" width="25%">
 </p>
 
 ## 🚀 Tecnologias
